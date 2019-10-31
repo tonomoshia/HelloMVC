@@ -11,7 +11,9 @@ namespace HelloMVC.Controllers
         {
             return Content("<h1>Hello World</h1>", "text/HTML");
         }
-
+        // Hello Goodbye
+        // alter the route to this controller to be: /Hello/Aloha
+        [Route("/Hello/Aloha")]
         public IActionResult Goodbye()
         {
             return Content("Goodbye");
