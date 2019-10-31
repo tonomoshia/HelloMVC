@@ -9,7 +9,7 @@ namespace HelloMVC.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            string html = "<form method='post action='/Hello/Display'>" +
+            string html = "<form method='post' action='/Hello/Display'>" +
                 "<input type='text' name = 'name'  />" +
                  "<input type='submit' value='Greet me!'  />" +
                 "</form>";
