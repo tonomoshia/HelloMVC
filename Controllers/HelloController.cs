@@ -7,12 +7,12 @@ namespace HelloMVC.Controllers
     public class HelloController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index(string name)
+        public IActionResult Index(string name = "World")
         {
-            if (string.IsNullOrEmpty(name))
-            {
-                name = "World";
-            }
+            //if (string.IsNullOrEmpty(name))
+            //{
+            //    name = "World";
+            //}
 
             return Content(string.Format("<h1>Hello {0}</h1>", name), "text/HTML");
         }
