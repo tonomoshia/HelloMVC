@@ -7,16 +7,21 @@ namespace HelloMVC.Controllers
     public class HelloController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index(string name = "World")
+        public IActionResult Index()
         {
-            //if (string.IsNullOrEmpty(name))
-            //{
-            //    name = "World";
-            //}
+            string html = "<form method='post action='/Hello/Display'>" +
+                "<input type='text' name = 'name'  />" +
+                 "<input type='submit' value='Greet me!'  />" +
+                "</form>";
 
-            return Content(string.Format("<h1>Hello {0}</h1>", name), "text/HTML");
+            return Content(html, "text/HTML");
         }
         // used https://localhost:44350/Hello?name=Lola to test query parameter
+
+        public IActionResult Display(string name = "World")
+        {
+            return Content(string.Format("<h1>Hello {0}</h1>", name), "text/HTML");
+        }
         public IActionResult Goodbye()
         {
             return Content("Goodbye");

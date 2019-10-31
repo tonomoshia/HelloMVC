@@ -73,8 +73,15 @@ _[Ss]cripts
 *.nupkg
 *.ncrunchsolution
 *.dot[Cc]over
-.ini
+
+# other stuff
 db.lock
+desktop.ini
+storage.ide
 storage.ide-shm
 storage.ide-wal
-desktop.ini
+.ide
+.ide-wal
+.ide-shm
+.ini
+.VS
