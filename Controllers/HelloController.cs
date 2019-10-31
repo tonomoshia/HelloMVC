@@ -27,6 +27,13 @@ namespace HelloMVC.Controllers
         {
             return Content(string.Format("<h1>Hello {0}</h1>", name), "text/HTML");
         }
+
+        // Handle request to /Hello/NAME (URL segment)
+        [Route("/Hello/{name}")]
+        public IActionResult Index2(string name)
+        {
+            return Content(string.Format("<h1>Hello {0}</h1>", name), "text/HTML");
+        }
         public IActionResult Goodbye()
         {
             return Content("Goodbye");
