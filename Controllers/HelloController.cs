@@ -4,12 +4,17 @@
 
 namespace HelloMVC.Controllers
 {
-    public class HomeController1 : Controller
+    public class HelloController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return Content("Hello World");
+            return Content("<h1>Hello World</h1>", "text/html");
+        }
+
+        public IActionResult Goodbye()
+        {
+            return Content("Goodbye");
         }
     }
 }
