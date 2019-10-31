@@ -16,7 +16,7 @@ namespace HelloMVC.Controllers
                  "<input type='submit' value='Greet me!'  />" +
                 "</form>";
 
-            return Content(html, "text/HTML");
+            return Redirect("/Hello/Goodbye");
         }
         // used https://localhost:44350/Hello?name=Lola to test query parameter
 
