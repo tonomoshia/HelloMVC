@@ -7,13 +7,16 @@ namespace HelloMVC.Controllers
     public class HelloController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult Index(string name)
         {
-            return Content("<h1>Hello World</h1>", "text/HTML");
+            if (string.IsNullOrEmpty(name))
+            {
+                name = "World";
+            }
+
+            return Content(string.Format("<h1>Hello {0}</h1>", name), "text/HTML");
         }
-        // Hello Goodbye
-        // alter the route to this controller to be: /Hello/Aloha
-        [Route("/Hello/Aloha")]
+        // used https://localhost:44350/Hello?name=Lola to test query parameter
         public IActionResult Goodbye()
         {
             return Content("Goodbye");
